@@ -1,0 +1,10 @@
+;Biosdatenbereich
+;Marius Greuel '94
+
+@BIOS_DATA		segment at 40h use16
+			org 6ch
+@BD_TIMER_CNTR		dd ?
+@BD_TIMER_OVFLW_FLG	db ?
+			ends
+
+

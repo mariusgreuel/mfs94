@@ -1,0 +1,98 @@
+;File: trainer.scr
+
+Echo "  using model trainer"
+
+Define
+MoveR .55,.075,0
+  Point 0,0,0		;Nase
+MoveR -.225,0,0
+  Point 0,.095,-.06	;1. Teil
+  Point 0,.095,.06
+  Point 0,-.105,.06
+  Point 0,-.105,-.06
+MoveR -.325,0,0
+  Point 0,.175,-.1	;2. Teil
+  Point 0,.175,.1
+  Point 0,-.125,.1
+  Point 0,-.125,-.1
+MoveR -.225,0,0
+  Point 0,.105,-.03	;3. Teil
+  Point 0,.105,.03
+  Point 0,0,.03
+  Point 0,0,-.03
+MoveR -.5,.05,0
+  Point 0,0,0		;Heck
+  Point -.05,.135,0
+  Point 0,.135,0
+  Point .08,.01,0
+  Point .08,-.01,0
+  Point -.03,-.135,0
+  Point -.08,-.135,0
+MoveA 0,.3,0
+  Point 0,0,.8		;Rotor
+  Point .306,0,.739
+  Point .566,0,.566
+  Point .739,0,.306
+  Point .8,0,0
+  Point .739,0,-.306
+  Point .566,0,-.566
+  Point .306,0,-.739
+  Point 0,0,-.8
+  Point -.306,0,-.739
+  Point -.566,0,-.566
+  Point -.739,0,-.306
+  Point -.8,0,0
+  Point -.739,0,.306
+  Point -.566,0,.566
+  Point -.306,0,.739
+MoveA 0,-.12,0
+  Point .5,0,.18	;Kufen
+  Point -.2,0,.18
+  Point .5,0,-.18
+  Point -.2,0,-.18
+
+  Polygon LCyan, Draw+Fill, 1,2,3
+  Polygon LCyan, Draw+Fill, 1,3,4
+  Polygon LCyan, Draw+Fill, 1,4,5
+  Polygon LCyan, Draw+Fill, 1,5,2
+  Polygon LRed, Draw+Fill, 2,6,7,3
+  Polygon LRed, Draw+Fill, 3,7,8,4
+  Polygon LRed, Draw+Fill, 4,8,9,5
+  Polygon LRed, Draw+Fill, 5,9,6,2
+  Polygon LMagenta, Draw+Fill, 6,10,11,7
+  Polygon LMagenta, Draw+Fill, 7,11,12,8
+  Polygon LMagenta, Draw+Fill, 8,12,13,9
+  Polygon LMagenta, Draw+Fill, 9,13,10,6
+  Polygon Yellow, Draw+Fill, 10,14,11
+  Polygon Yellow, Draw+Fill, 11,14,12
+  Polygon Yellow, Draw+Fill, 12,14,13
+  Polygon Yellow, Draw+Fill, 13,14,10
+  Polygon White,Fill+TwoSides, 14,15,16,17
+  Polygon White,Fill+TwoSides, 14,18,19,20
+  Polygon Gray, Draw+TwoSides, 21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36
+  Line Black, 38, 39, 40
+  Line Black, 40, 37, 38
+  Polygon Black, Dummy, 13,12,11,10
+End
+Object 0,0,0
+
+Define
+MoveR .55,0,0
+  Point 0,0,0		;Nase
+MoveR -.225,0,0
+  Point 0,0,.1
+  Point 0,0,-.1
+MoveR -.325,0,0
+  Point 0,0,.15
+  Point 0,0,-.15
+MoveR -.225,0,0
+  Point 0,0,.06
+  Point 0,0,-.06
+MoveR -.5,0,0
+  Point 0,0,0		;Heck
+
+  Polygon Black, Fill+TwoSides, 1,2,4,6,7,5,3
+  Polygon Black, Fill+TwoSides, 6,7,8
+End
+
+Object 0,0,0

@@ -1,0 +1,18 @@
+;File: mfs.scr
+
+include "trainer.scr"
+object 0,0,15
+
+include "airport.scr"
+object 0,0,0
+
+include "tree1.scr"
+object 10,0,80
+object 20,0,70
+object 15,0,60
+object 5,0,90
+object -10,0,80
+object -20,0,70
+object -15,0,60
+object -5,0,90
+
